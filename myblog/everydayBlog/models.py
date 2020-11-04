@@ -34,5 +34,8 @@ class Comments(model.Model):
         self.approve_comment =True
         self.save()
 
+    def get_absolute_url(self):
+        return reverse('post_list')
+
     def __str__(self):
         return self.text
